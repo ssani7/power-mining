@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/shared/Navbar';
 import { ThemeProvider } from '@mui/material';
 import theme from '@/providers/MUI';
+import Footer from '@/components/UI/Footer';
 
 const inter = Poppins({
 	subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function RootLayout({
 				<ThemeProvider theme={theme}>
 					<Navbar />
 					{children}
+					<Footer />
 				</ThemeProvider>
 			</body>
 		</html>

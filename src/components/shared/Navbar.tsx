@@ -7,15 +7,22 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Image from 'next/image';
-import logo from '@/../public/logo.png';
+import logo from '@/assets/fulllogo.png';
 import PrimaryButton from './PrimaryButton';
 import SecondaryButton from './SecondaryButton';
 import uk from '@/assets/uk.png';
 import { IconButton, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import Link from 'next/link';
 
-const pages = ['About Us', 'White Paper', 'Contact'];
+const pages = [
+	{ name: 'About Us', link: '/notfound' },
+	{ name: 'White Paper', link: '/about' },
+	{ name: 'Contact', link: '/notfound' },
+];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+const WHITE_PAPER_LINK = 'https://drive.google.com/file/d/1TcnxE6Q3Cr6tBslJBHZ5sCRe6HZoNlKk/view?usp=sharing';
 
 function Navbar() {
 	const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -39,7 +46,7 @@ function Navbar() {
 
 	return (
 		<AppBar position="sticky" sx={{ boxShadow: 'none', background: '#f7fced' }}>
-			{showBrc && (
+			{/* {showBrc && (
 				<div className="bg-black py-1">
 					<Typography variant="subtitle2" textAlign="center" color="white">
 						Check local regulations to be aware of permission and conditions to use and transact BEP-20 tokens.
@@ -48,28 +55,40 @@ function Navbar() {
 						<CloseIcon className="absolute right-0 top-1 bottom-1 text-white cursor-pointer" />
 					</div>
 				</div>
-			)}
+			)} */}
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
-					<Box sx={{ display: 'flex', alignItems: 'center', mr: 1 }}>
-						<Image src={logo} className="size-10 rounded-sm" alt="logo" />
-						<div className="flex flex-col gap-0 ml-2 font-semibold">
-							<p>Power</p>
-							<p>Token</p>
-						</div>
-					</Box>
+					<Link href="/">
+						<Box sx={{ display: 'flex', alignItems: 'center', mr: 1 }}>
+							<Image src={logo} className="size-10 rounded-sm" alt="logo" />
+							<div className="flex flex-col gap-0 ml-2 font-semibold">
+								<p>Power Mining Coin</p>
+								{/* <p>Coin</p> */}
+							</div>
+						</Box>
+					</Link>
 
 					<Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'end' }}>
 						{pages.map((page) => (
-							<Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, color: '#000', display: 'block', textTransform: 'capitalize' }}>
-								{page}
+							<Button key={page.link} onClick={handleCloseNavMenu} sx={{ my: 2, color: '#000', display: 'block', textTransform: 'capitalize' }}>
+								{page.name == 'White Paper' ? (
+									<a href={WHITE_PAPER_LINK} target="_blank">
+										White Paper
+									</a>
+								) : (
+									<Link href={page.link}>{page.name}</Link>
+								)}
 							</Button>
 						))}
 					</Box>
 
 					<Box sx={{ marginLeft: '10px', display: 'flex', gap: '10px' }}>
-						<SecondaryButton title="Air Drop" />
-						<PrimaryButton>Launch App</PrimaryButton>
+						<Link href="/notfound">
+							<SecondaryButton>Air Drop</SecondaryButton>
+						</Link>
+						<Link href="/notfound">
+							<PrimaryButton>Launch App</PrimaryButton>
+						</Link>
 					</Box>
 
 					<Box sx={{ display: 'flex', alignItems: 'center', gap: '8px', marginLeft: '16px' }}>

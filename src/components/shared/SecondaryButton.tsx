@@ -3,10 +3,10 @@ import { Poppins } from 'next/font/google';
 import React from 'react';
 
 interface PrimaryButtonProps {
-	title: string;
+	children: React.ReactNode;
 }
 
-const SecondaryButton = ({ title }: PrimaryButtonProps) => {
+const SecondaryButton = ({ children }: PrimaryButtonProps) => {
 	return (
 		<Button
 			variant="contained"
@@ -19,7 +19,7 @@ const SecondaryButton = ({ title }: PrimaryButtonProps) => {
 				color: '#fff',
 				padding: '8px 30px',
 			}}>
-			{title}
+			{children}
 		</Button>
 	);
 };
