@@ -4,7 +4,7 @@ import Banner from '@/components/UI/Banner';
 import Services from '@/components/UI/Services';
 import '../styles/embla.css';
 import FadeIn from '@/components/motions/FadeIn';
-import elipse from '@/assets/elipse.png';
+import elipse from '@/assets/elipse2.png';
 import FadeInScroll from '@/components/motions/FadeInScroll';
 import FullCarousel from '@/components/UI/FullCarousel';
 import GoodBad from '@/components/UI/GoodBad';
