@@ -6,8 +6,8 @@ import Image from 'next/image';
 
 const Banner = () => {
 	return (
-		<div className="flex items-center justify-center px-10 pt-14">
-			<div className="w-1/3 flex flex-col gap-3 text-center">
+		<div className="flex items-center justify-center px-6 xl:px-10 pt-6 xl:pt-14">
+			<div className="xl:w-1/3 flex flex-col gap-3 text-center">
 				<Typography variant="h2" fontWeight="600">
 					Invest In PMC Mining
 				</Typography>

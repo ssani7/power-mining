@@ -1,0 +1,17 @@
+.top-half-circle {
+	width: 200px;
+	height: 100px;
+	border-top-left-radius: 110px;
+	border-top-right-radius: 110px;
+	border: 10px solid gray;
+	border-bottom: 0;
+}
+
+.bottom-half-circle {
+	width: 200px;
+	height: 100px;
+	border-bottom-left-radius: 110px;
+	border-bottom-right-radius: 110px;
+	border: 10px solid gray;
+	border-top: 0;
+}

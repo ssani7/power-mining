@@ -11,9 +11,9 @@ import logo from '@/assets/fulllogo.png';
 import PrimaryButton from './PrimaryButton';
 import SecondaryButton from './SecondaryButton';
 import uk from '@/assets/uk.png';
-import { IconButton, Typography } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+import { Typography } from '@mui/material';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const pages = [
 	{ name: 'About Us', link: '/notfound' },
@@ -27,7 +27,6 @@ const WHITE_PAPER_LINK = 'https://drive.google.com/file/d/1TcnxE6Q3Cr6tBslJBHZ5s
 function Navbar() {
 	const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 	const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
-	const [showBrc, setShowbrc] = React.useState(true);
 
 	const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
 		setAnchorElNav(event.currentTarget);
@@ -45,60 +44,51 @@ function Navbar() {
 	};
 
 	return (
-		<AppBar position="sticky" sx={{ boxShadow: 'none', background: '#f7fced' }}>
-			{/* {showBrc && (
-				<div className="bg-black py-1">
-					<Typography variant="subtitle2" textAlign="center" color="white">
-						Check local regulations to be aware of permission and conditions to use and transact BEP-20 tokens.
-					</Typography>
-					<div onClick={() => setShowbrc(false)}>
-						<CloseIcon className="absolute right-0 top-1 bottom-1 text-white cursor-pointer" />
-					</div>
-				</div>
-			)} */}
-			<Container maxWidth="xl">
-				<Toolbar disableGutters>
-					<Link href="/">
-						<Box sx={{ display: 'flex', alignItems: 'center', mr: 1 }}>
-							<Image src={logo} className="size-10 rounded-sm" alt="logo" />
-							<div className="flex flex-col gap-0 ml-2 font-semibold">
-								<p>Power Mining Coin</p>
-								{/* <p>Coin</p> */}
-							</div>
+		<AppBar position="sticky" sx={{ boxShadow: 'none', background: '#fff' }}>
+			<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ ease: 'easeInOut', duration: 0.75 }}>
+				<Container maxWidth="xl">
+					<Toolbar disableGutters>
+						<Link href="/">
+							<Box sx={{ display: 'flex', alignItems: 'center', mr: 1 }}>
+								<Image src={logo} className="size-12 rounded-sm bg-gradient-to-tr from-[#6CA340] to-[#BBE667] p-1" alt="logo" />
+								<div className="flex flex-col gap-0 ml-2 font-semibold">
+									<p>Power Mining Coin</p>
+									{/* <p>Coin</p> */}
+								</div>
+							</Box>
+						</Link>
+
+						<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'end' }}>
+							{pages.map((page) => (
+								<Button key={page.link} onClick={handleCloseNavMenu} sx={{ my: 2, color: '#000', display: 'block', textTransform: 'capitalize' }}>
+									{page.name == 'White Paper' ? (
+										<a href={WHITE_PAPER_LINK} target="_blank">
+											White Paper
+										</a>
+									) : (
+										<Link href={page.link}>{page.name}</Link>
+									)}
+								</Button>
+							))}
 						</Box>
-					</Link>
 
-					<Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'end' }}>
-						{pages.map((page) => (
-							<Button key={page.link} onClick={handleCloseNavMenu} sx={{ my: 2, color: '#000', display: 'block', textTransform: 'capitalize' }}>
-								{page.name == 'White Paper' ? (
-									<a href={WHITE_PAPER_LINK} target="_blank">
-										White Paper
-									</a>
-								) : (
-									<Link href={page.link}>{page.name}</Link>
-								)}
-							</Button>
-						))}
-					</Box>
+						<Box sx={{ marginLeft: '10px', display: { xs: 'none', md: 'flex' }, gap: '10px' }}>
+							<Link href="/notfound">
+								<SecondaryButton>Air Drop</SecondaryButton>
+							</Link>
+							<Link href="/notfound">
+								<PrimaryButton>Launch App</PrimaryButton>
+							</Link>
+						</Box>
 
-					<Box sx={{ marginLeft: '10px', display: 'flex', gap: '10px' }}>
-						<Link href="/notfound">
-							<SecondaryButton>Air Drop</SecondaryButton>
-						</Link>
-						<Link href="/notfound">
-							<PrimaryButton>Launch App</PrimaryButton>
-						</Link>
-					</Box>
+						<Box sx={{ display: 'flex', alignItems: 'center', gap: '8px', marginLeft: '16px', flexGrow: { xs: 1, md: 0 }, justifyContent: 'end' }}>
+							<Image src={uk} height={100} width={100} className="w-7" alt="USA" />
+							<Typography variant="body2" fontWeight={600}>
+								English
+							</Typography>
+						</Box>
 
-					<Box sx={{ display: 'flex', alignItems: 'center', gap: '8px', marginLeft: '16px' }}>
-						<Image src={uk} height={100} width={100} className="w-7" alt="USA" />
-						<Typography variant="body2" fontWeight={600}>
-							English
-						</Typography>
-					</Box>
-
-					{/* <Box sx={{ flexGrow: 0 }}>
+						{/* <Box sx={{ flexGrow: 0 }}>
 						<Tooltip title="Open settings">
 							<IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
 								<Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -126,8 +116,9 @@ function Navbar() {
 							))}
 						</Menu>
 					</Box> */}
-				</Toolbar>
-			</Container>
+					</Toolbar>
+				</Container>
+			</motion.div>
 		</AppBar>
 	);
 }
