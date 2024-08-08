@@ -15,7 +15,7 @@ export default function Home() {
 	return (
 		<div className="">
 			<FadeIn>
-				<Image src={elipse} className="max-h-[40vh] absolute w-full -z-10" alt="" />
+				<Image src={elipse} className="h-[30vh] xl:h-[38vh] absolute w-full -z-10" alt="" />
 				<Banner />
 			</FadeIn>
 
