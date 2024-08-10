@@ -31,7 +31,7 @@ const Footer = () => {
 				</div>
 
 				<Typography color="white" variant="body1" textAlign="center">
-					Access our app to get more information on how to invest in AMT, simulate its profitability in different scenarios, and of course, check the active machines in the AMT Project in real time.
+					Access our app to get more information on how to invest in PMT, simulate its profitability in different scenarios, and of course, check the active machines in the AMT Project in real time.
 				</Typography>
 
 				<div className="flex justify-center">
