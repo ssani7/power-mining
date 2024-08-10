@@ -16,8 +16,8 @@ const social = [
 
 const Footer = () => {
 	return (
-		<>
-			<div className="bg-[#1C3F00] p-10 flex flex-col gap-5 mt-8">
+		<div className="z-20 absolute w-full">
+			<div className="bg-[#1C3F00] p-10 flex flex-col gap-5">
 				<div className="flex items-center gap-3 justify-center">
 					<Image src={logo} className="w-20 rounded-sm" alt="" />
 					<div className="">
@@ -61,7 +61,7 @@ const Footer = () => {
 					Copyright © 2023. All rights reserved Privacy Policy - Terms of Use
 				</Typography>
 			</div>
-		</>
+		</div>
 	);
 };
 

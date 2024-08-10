@@ -9,3 +9,45 @@ p {
 .bg-elipse {
 	/* background-image: url('../assets/elipse.png'); */
 }
+
+#tsparticles canvas {
+	z-index: 0;
+	/* background: linear-gradient(to right, #3d7113, #6ca340); */
+	/* background-image: url('../../public/green-galaxy2.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; */
+	background-color: transparent;
+}
+
+.glass_card {
+	border: 1px solid #ffffff22;
+	background-color: #282c34;
+	background: linear-gradient(30deg, rgba(60, 85, 40, 0.275) 0%, rgba(32, 41, 15, 0.3) 100%);
+	/* box-shadow: 0 7px 10px 5px #fff; */
+	border-radius: 0.7rem;
+	backdrop-filter: blur(7px);
+}
+
+.galaxybg {
+	background-image: url('../../public/green-galaxy2.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 10;
+}
+
+.custom-scroll::-webkit-scrollbar {
+	height: 6px;
+	cursor: pointer;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+	background: #bbe667;
+	border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+	background: #39851022;
+	box-shadow: inset 0 0 5px grey;
+}

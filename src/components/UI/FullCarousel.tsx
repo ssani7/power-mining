@@ -7,10 +7,18 @@ import EmblaCarousel from '@/components/UI/Carousel';
 import { EmblaOptionsType } from 'embla-carousel';
 import { Typography, duration } from '@mui/material';
 import { motion } from 'framer-motion';
+import ceo from '@/assets/ceo.png';
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+const SLIDES = [
+	{
+		photo: ceo,
+		title: 'Ceo & Founder',
+		name: 'Ibn Sayed Sagar',
+		profileLinks: [{ name: 'linkedin', link: 'https://www.linkedin.com/in/ibn-sayed-sagar-7aa554208' }],
+	},
+];
 
 const FullCarousel = () => {
 	const container = {
@@ -42,23 +50,28 @@ const FullCarousel = () => {
 				once: true,
 				amount: 0.5,
 			}}
-			className="flex flex-col gap-5">
+			className="flex flex-col gap-5 pb-10">
 			<motion.div variants={item}>
 				<Typography variant="h5" fontWeight={600} textAlign="center">
 					About
 				</Typography>
 			</motion.div>
 
-			<motion.div variants={item}>
+			<motion.div variants={item} className="xl:max-w-[60vw] mx-auto px-6">
 				<Typography variant="body1" textAlign="center">
-					Our mission is to democrtizon PMC Mining
+					Power Anywhere, With Anybody Power is the first virtual social helping platform for the poor people that supports global users to make friends, live,and entertain without borders. On the
+					basis of LBS (Location Based Services)functionality, the users can find nearby persons or users from anywhere in the world that you are interested in real time and easily start conversations
+					by using the system&#39;s automatic language translation.And rich people can help Poor people.
 				</Typography>
 			</motion.div>
 
 			<motion.div variants={item}>
 				<div className="flex flex-col xl:flex-row justify-center items-center gap-6">
-					<PrimaryButton>OUR MINING COMPANIES</PrimaryButton>
-					<SecondaryButton>AMT Team</SecondaryButton>
+					{/* <PrimaryButton>OUR MINING COMPANIES</PrimaryButton> */}
+					{/* <SecondaryButton>PMT Team</SecondaryButton> */}
+					<Typography variant="h5" fontWeight={700} textAlign="center">
+						PMT Team
+					</Typography>
 				</div>
 			</motion.div>
 

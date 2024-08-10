@@ -42,7 +42,7 @@ const GoodBad = () => {
 					initial="hidden"
 					whileInView="show"
 					viewport={{ once: true, amount: 0.5 }}
-					className="xl:w-1/2 flex flex-col gap-4 items-center text-center bg-[#F4C1C1] p-10 rounded-lg">
+					className="xl:w-1/2 flex flex-col gap-4 items-center text-center bg-[#754f4f] p-10 rounded-lg">
 					<Image src={cross} className="size-[100px]" alt="" />
 					<Typography variant="h6">Mining without PMC</Typography>
 					<Typography variant="body2">
@@ -55,7 +55,7 @@ const GoodBad = () => {
 					initial="hidden"
 					whileInView="show"
 					viewport={{ once: true, amount: 0.5 }}
-					className="xl:w-1/2 flex flex-col gap-4 items-center text-center bg-[#A3F2AB] p-10 rounded-lg">
+					className="xl:w-1/2 flex flex-col gap-4 items-center text-center bg-[#094910] p-10 rounded-lg">
 					<Image src={check} className="size-[100px]" alt="" />
 					<Typography variant="h6">Mining With PMC</Typography>
 					<Typography variant="body2">Mining PMC with Your Phone and Internet Only.</Typography>

@@ -12,6 +12,9 @@ const poppins = Poppins({
 const theme = createTheme({
 	typography: {
 		fontFamily: poppins.style.fontFamily,
+		allVariants: {
+			color: '#fff',
+		},
 	},
 
 	palette: {
@@ -32,6 +35,10 @@ const theme = createTheme({
 			secondary: '#000',
 			disabled: '#000',
 			// hint: '#000',
+		},
+		background: {
+			default: '#000',
+			paper: '#182a08',
 		},
 	},
 });
