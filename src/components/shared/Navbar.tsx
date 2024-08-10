@@ -110,6 +110,9 @@ function Navbar() {
 									</MenuItem>
 								))}
 								<MenuItem onClick={handleCloseNavMenu}>
+									<DocsMenu />
+								</MenuItem>
+								<MenuItem onClick={handleCloseNavMenu}>
 									<LanguageSelect />
 								</MenuItem>
 							</Menu>
