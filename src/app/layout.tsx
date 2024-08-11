@@ -14,7 +14,7 @@ const inter = Poppins({
 });
 
 export const metadata: Metadata = {
-	title: 'Power Token',
+	title: 'Power Mining',
 	description: '',
 };
 
