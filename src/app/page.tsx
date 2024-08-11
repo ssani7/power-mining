@@ -11,40 +11,44 @@ import GoodBad from '@/components/UI/GoodBad';
 import { Typography } from '@mui/material';
 import RoadMap from '@/components/UI/RoadMap';
 import Animation from '@/components/UI/Animation';
+import { unstable_setRequestLocale } from 'next-intl/server';
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-	return (
-		<main>
-			<Animation />
-			<div className="galaxybg">
-				<FadeIn>
-					{/* <Image src={elipse} className="h-[30vh] xl:h-[38vh] absolute w-full -z-10" alt="" /> */}
-					<Banner />
-				</FadeIn>
+export default function Home({ params: { locale } }: Readonly<{ params: { locale: string } }>) {
+	unstable_setRequestLocale(locale);
+	// return (
+	// 	<main>
+	// 		<Animation />
+	// 		<div className="galaxybg">
+	// 			<FadeIn>
+	// 				{/* <Image src={elipse} className="h-[30vh] xl:h-[38vh] absolute w-full -z-10" alt="" /> */}
+	// 				<Banner />
+	// 			</FadeIn>
 
-				<FadeInScroll>
-					<Services />
-				</FadeInScroll>
+	// 			<FadeInScroll>
+	// 				<Services />
+	// 			</FadeInScroll>
 
-				<GoodBad />
+	// 			<GoodBad />
 
-				{/* <div>
-				<svg width="100%" height="200" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
-					<path d="M0,100 Q150,200 300,100 T600,100 T900,100 T1200,100" fill="none" stroke="black" strokeWidth="3" />
-				</svg>
-			</div> */}
+	// 			{/* <div>
+	// 			<svg width="100%" height="200" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
+	// 				<path d="M0,100 Q150,200 300,100 T600,100 T900,100 T1200,100" fill="none" stroke="black" strokeWidth="3" />
+	// 			</svg>
+	// 		</div> */}
 
-				{/* <Charts /> */}
+	// 			{/* <Charts /> */}
 
-				<div className="py-10 my-20 xl:py-20  custom-scroll">
-					<Typography variant="h5" fontWeight={600} textAlign="center">
-						Roadmap
-					</Typography>
-					<RoadMap />
-				</div>
+	// 			<div className="py-10 my-20 xl:py-20  custom-scroll">
+	// 				<Typography variant="h5" fontWeight={600} textAlign="center">
+	// 					Roadmap
+	// 				</Typography>
+	// 				<RoadMap />
+	// 			</div>
 
-				<FullCarousel />
-			</div>
-		</main>
-	);
+	// 			<FullCarousel />
+	// 		</div>
+	// 	</main>
+	// );
+	redirect('/en');
 }

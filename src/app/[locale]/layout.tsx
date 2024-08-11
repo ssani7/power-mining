@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 import Navbar from '@/components/shared/Navbar';
 import { ThemeProvider } from '@mui/material';
 import theme from '@/providers/MUI';
@@ -9,6 +9,7 @@ export default async function LocaleLayout({ children, params: { locale } }: { c
 	// Providing all messages to the client
 	// side is the easiest way to get started
 	const messages = await getMessages();
+	unstable_setRequestLocale(locale);
 
 	return (
 		<html lang={locale}>

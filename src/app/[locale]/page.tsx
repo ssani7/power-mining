@@ -11,8 +11,10 @@ import GoodBad from '@/components/UI/GoodBad';
 import { Typography } from '@mui/material';
 import RoadMap from '@/components/UI/RoadMap';
 import Animation from '@/components/UI/Animation';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
-export default function Home() {
+export default function Home({ params: { locale } }: Readonly<{ params: { locale: string } }>) {
+	unstable_setRequestLocale(locale);
 	return (
 		<>
 			<Animation />
