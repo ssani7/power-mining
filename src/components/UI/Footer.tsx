@@ -60,7 +60,7 @@ const Footer = () => {
 			</div>
 			<div className="flex justify-center bg-black py-4">
 				<Typography color="white" variant="caption" textAlign="center" sx={{ margin: 'auto' }}>
-					Copyright © 2023. All rights reserved Privacy Policy - Terms of Use
+					Copyright © 2024. All rights reserved Privacy Policy - Terms of Use
 				</Typography>
 			</div>
 		</div>

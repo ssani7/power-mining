@@ -5,7 +5,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useTranslations } from 'next-intl';
 
 const PERMIT_LINK = 'https://drive.google.com/file/d/1TcnxE6Q3Cr6tBslJBHZ5sCRe6HZoNlKk/view?usp=sharing';
-const WHITE_PAPER_LINK = 'https://drive.google.com/file/d/1DRgsCNoyctj7gXbE7s-iPXPYZrbqJd_Y/view?usp=sharing';
+const WHITE_PAPER_LINK = 'https://docs.google.com/document/d/1UGhvU4unM90IYs3GvA3LGnTtdNrNwZsbDoHuGeHk7aU/edit';
 
 const DocsMenu = () => {
 	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);

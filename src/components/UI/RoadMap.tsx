@@ -45,7 +45,7 @@ const roadmap = [
 	},
 	{
 		date: 'January 2026',
-		desc: 'Officially launched CAT trading plan',
+		desc: 'Officially launched PMC trading plan',
 	},
 	{
 		date: 'June 2026',
