@@ -26,11 +26,12 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<ThemeProvider theme={theme}>
+				{/* <ThemeProvider theme={theme}>
 					<Navbar />
 					{children}
 					<Footer />
-				</ThemeProvider>
+					</ThemeProvider> */}
+				{children}
 			</body>
 		</html>
 	);

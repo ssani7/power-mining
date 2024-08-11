@@ -8,19 +8,13 @@ import { EmblaOptionsType } from 'embla-carousel';
 import { Typography, duration } from '@mui/material';
 import { motion } from 'framer-motion';
 import ceo from '@/assets/ceo.png';
+import { useTranslations } from 'next-intl';
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDE_COUNT = 5;
-const SLIDES = [
-	{
-		photo: ceo,
-		title: 'Ceo & Founder',
-		name: 'Ibn Sayed Sagar',
-		profileLinks: [{ name: 'linkedin', link: 'https://www.linkedin.com/in/ibn-sayed-sagar-7aa554208' }],
-	},
-];
 
 const FullCarousel = () => {
+	const t = useTranslations('About');
 	const container = {
 		hidden: { opacity: 0, y: 20 },
 		show: {
@@ -41,8 +35,18 @@ const FullCarousel = () => {
 		},
 	};
 
+	const SLIDES = [
+		{
+			photo: ceo,
+			title: 'CEO & Founder',
+			name: 'Ibn Sayed Sagar',
+			profileLinks: [{ name: 'linkedin', link: 'https://www.linkedin.com/in/ibn-sayed-sagar-7aa554208' }],
+		},
+	];
+
 	return (
 		<motion.div
+			id="about"
 			variants={container}
 			initial="hidden"
 			whileInView="show"
@@ -53,15 +57,13 @@ const FullCarousel = () => {
 			className="flex flex-col gap-5 pb-10">
 			<motion.div variants={item}>
 				<Typography variant="h5" fontWeight={600} textAlign="center">
-					About
+					{t('About')}
 				</Typography>
 			</motion.div>
 
 			<motion.div variants={item} className="xl:max-w-[60vw] mx-auto px-6">
 				<Typography variant="body1" textAlign="center">
-					Power Anywhere, With Anybody Power is the first virtual social helping platform for the poor people that supports global users to make friends, live,and entertain without borders. On the
-					basis of LBS (Location Based Services)functionality, the users can find nearby persons or users from anywhere in the world that you are interested in real time and easily start conversations
-					by using the system&#39;s automatic language translation.And rich people can help Poor people.
+					{t('desc')}
 				</Typography>
 			</motion.div>
 
@@ -70,7 +72,7 @@ const FullCarousel = () => {
 					{/* <PrimaryButton>OUR MINING COMPANIES</PrimaryButton> */}
 					{/* <SecondaryButton>PMT Team</SecondaryButton> */}
 					<Typography variant="h5" fontWeight={700} textAlign="center">
-						PMT Team
+						{t('PMC Team')}
 					</Typography>
 				</div>
 			</motion.div>

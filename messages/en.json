@@ -1,0 +1,46 @@
+{
+	"HomePage": {
+		"title": "Invest In PMC Mining",
+		"title-desc": "Poor People Earn With PMC Mining",
+		"Buy Now": "Buy Now"
+	},
+	"Navbar": {
+		"documents": "Documents",
+		"White Paper": "White Paper",
+		"Business Permit": "Business Permit",
+		"Air Drop": "Air Drop",
+		"Launch App": "Launch App",
+		"About Us": "About Us",
+		"Contact": "Contact"
+	},
+	"Services": {
+		"What is PMC?": "What is PMC?",
+		"ans1": "Power Mining Coin Is a Random Poor People Earning With Crypto Application.",
+		"ans2": "Power Mining Coin Is a BSC/Sol And PMC MainNet Token/Coin That Generates Passive income in PMC Daily.",
+		"ans3": "We Tokenized Our PMC Mining Ecosystem.",
+		"ans4": "Token/Coin are like partitioned PMC Miners more tokens/coin imply greater terash power, who's means higher PMC production.",
+		"Start Mining": "Start Mining"
+	},
+	"GoodBad": {
+		"heading": "The Democratization of PMC Mining",
+		"bad title": "Mining without PMC",
+		"bad desc": "Mining without PMC you need to import machines,find suitable space,deal with high electricity coats, invest in cooling equipment,hire staff, perform maintenance,and pay taxes.",
+		"good title": "Mining With PMC",
+		"good desc": "Mining PMC with Your Phone and Internet Only."
+	},
+	"Roadmap": {
+		"Roadmap": "Roadmap"
+	},
+	"About": {
+		"About": "About",
+		"desc": "Power Anywhere, With Anybody Power is the first virtual social helping platform for the poor people that supports global users to make friends, live,and entertain without borders. On the basis of LBS (Location Based Services)functionality, the users can find nearby persons or users from anywhere in the world that you are interested in real time and easily start conversations by using the system's automatic language translation.And rich people can help Poor people.",
+		"PMC Team": "PMC Team",
+		"title-ceo": "CEO & Founder",
+		"ceo name": "Ibn Sayed Sagar"
+	},
+	"Footer": {
+		"text": "Access our app to get more information on how to invest in PMT, simulate its profitability in different scenarios, and of course, check the active machines in the AMT Project in real time.",
+		"Launch App": "Launch App",
+		"connect": "Connect with us"
+	}
+}

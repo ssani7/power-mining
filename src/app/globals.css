@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	scroll-behavior: smooth;
+}
+
 p {
 	color: black;
 }
@@ -50,4 +54,11 @@ p {
 .custom-scroll::-webkit-scrollbar-track {
 	background: #39851022;
 	box-shadow: inset 0 0 5px grey;
+}
+
+.dotted {
+	background-image: linear-gradient(to bottom, #333 10%, rgba(255, 255, 255, 0) 0%);
+	background-position: left;
+	background-size: 1px 10px;
+	background-repeat: repeat-y;
 }

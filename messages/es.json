@@ -1,0 +1,46 @@
+{
+	"HomePage": {
+		"title": "Invierta en minería PMC",
+		"title-desc": "Los pobres ganan dinero con PMC Mining",
+		"Buy Now": "Comprar ahora"
+	},
+	"Navbar": {
+		"documents": "Documentos",
+		"White Paper": "Libro Blanco",
+		"Business Permit": "Permiso comercial",
+		"Air Drop": "Air Drop",
+		"Launch App": "Lanzamiento App",
+		"About Us": "Sobre nosotras",
+		"Contact": "Contacto"
+	},
+	"Services": {
+		"What is PMC?": "¿Qué es el PMC?",
+		"ans1": "Power Mining Coin es una gente pobre aleatoria que gana con una aplicación criptográfica.",
+		"ans2": "Power Mining Coin es un token/moneda BSC/Sol y PMC MainNet que genera ingresos pasivos en PMC Daily.",
+		"ans3": "Tokenizamos nuestro ecosistema minero PMC.",
+		"ans4": "Los tokens/monedas son como mineros de PMC divididos. Más tokens/monedas implican una mayor potencia de terash, lo que significa una mayor producción de PMC.",
+		"Start Mining": "Comenzar a minar"
+	},
+	"GoodBad": {
+		"heading": "La democratización de la minería PMC",
+		"bad title": "Minería sin PMC",
+		"bad desc": "Para la minería sin PMC es necesario importar máquinas, encontrar espacio adecuado, lidiar con altos niveles de electricidad, invertir en equipos de refrigeración, contratar personal, realizar mantenimiento y pagar impuestos.",
+		"good title": "Minería con PMC",
+		"good desc": "Minería PMC con su teléfono e Internet únicamente."
+	},
+	"Roadmap": {
+		"Roadmap": "Hoja de ruta"
+	},
+	"About": {
+		"About": "Acerca de",
+		"desc": "Power Anywhere, With Anybody Power es la primera plataforma virtual de ayuda social para los pobres que ayuda a los usuarios globales a hacer amigos, vivir y entretenerse sin fronteras. Sobre la base de la funcionalidad LBS (Servicios basados ​​en la ubicación), los usuarios pueden encontrar personas cercanas o usuarios de cualquier parte del mundo que les interesen en tiempo real e iniciar conversaciones fácilmente utilizando la traducción automática de idiomas del sistema. Y los ricos pueden ayudar a los pobres. gente.",
+		"PMC Team": "Equipo PMC",
+		"title-ceo": "CEO & Founder",
+		"ceo name": "Ibn Sayed Sagar"
+	},
+	"Footer": {
+		"text": "Accede a nuestra app para obtener más información sobre cómo invertir en PMC, simular su rentabilidad en diferentes escenarios y por supuesto, consultar en tiempo real las máquinas activas del Proyecto PMC.",
+		"Launch App": "Iniciar aplicación",
+		"connect": "Conecta con nosotras"
+	}
+}

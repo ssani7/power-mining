@@ -6,8 +6,10 @@ import check from '@/assets/check.png';
 import { Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 const GoodBad = () => {
+	const t = useTranslations('GoodBad');
 	const container = {
 		hidden: { opacity: 0, y: 20 },
 		show: {
@@ -33,7 +35,7 @@ const GoodBad = () => {
 	return (
 		<motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.5 }}>
 			<Typography variant="h5" fontWeight={600} textAlign="center">
-				The Democratization of PMC Mining
+				{t('heading')}
 			</Typography>
 
 			<div className="flex flex-col xl:flex-row px-10 gap-8 py-6">
@@ -44,10 +46,8 @@ const GoodBad = () => {
 					viewport={{ once: true, amount: 0.5 }}
 					className="xl:w-1/2 flex flex-col gap-4 items-center text-center bg-[#754f4f] p-10 rounded-lg">
 					<Image src={cross} className="size-[100px]" alt="" />
-					<Typography variant="h6">Mining without PMC</Typography>
-					<Typography variant="body2">
-						Mining without PMC you need to import machines,find suitable space,deal with high electricity coats, invest in cooling equipment,hire staff, perform maintenance,and pay taxes.
-					</Typography>
+					<Typography variant="h6">{t('bad title')}</Typography>
+					<Typography variant="body2">{t('bad desc')}</Typography>
 				</motion.div>
 
 				<motion.div
@@ -57,8 +57,8 @@ const GoodBad = () => {
 					viewport={{ once: true, amount: 0.5 }}
 					className="xl:w-1/2 flex flex-col gap-4 items-center text-center bg-[#094910] p-10 rounded-lg">
 					<Image src={check} className="size-[100px]" alt="" />
-					<Typography variant="h6">Mining With PMC</Typography>
-					<Typography variant="body2">Mining PMC with Your Phone and Internet Only.</Typography>
+					<Typography variant="h6">{t('good title')}</Typography>
+					<Typography variant="body2">{t('good desc')}</Typography>
 				</motion.div>
 			</div>
 		</motion.div>

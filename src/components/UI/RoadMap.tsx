@@ -4,6 +4,7 @@ import { Typography } from '@mui/material';
 import React from 'react';
 import { motion } from 'framer-motion';
 import '@/styles/other.css';
+import CircleIcon from '@mui/icons-material/Circle';
 
 const roadmap = [
 	{
@@ -67,6 +68,27 @@ const RoadMap = () => {
 			},
 		},
 	};
+	const fromRight = {
+		hidden: { opacity: 1, x: '100%' },
+		show: {
+			opacity: 1,
+			x: 0,
+			transition: {
+				duration: 0.75,
+			},
+		},
+	};
+
+	const fromLeft = {
+		hidden: { opacity: 1, x: '-100%' },
+		show: {
+			opacity: 1,
+			x: 0,
+			transition: {
+				duration: 0.75,
+			},
+		},
+	};
 
 	const item = {
 		hidden: { opacity: 1, x: -100 },
@@ -80,8 +102,8 @@ const RoadMap = () => {
 	};
 
 	return (
-		<div className="overflow-x-scroll custom-scroll">
-			<motion.div
+		<div className="overflow-hidden pt-10">
+			{/* <motion.div
 				variants={container}
 				initial="hidden"
 				whileInView="show"
@@ -105,6 +127,63 @@ const RoadMap = () => {
 							<p className="text-white">Project execution begins. Token analysis and planning.</p>
 						</motion.div>
 					</motion.div>
+				))}
+			</motion.div> */}
+			<motion.div className="w-full px-4 xl:px-20">
+				{roadmap.map((r, i) => (
+					<div key={i}>
+						{i % 2 == 0 ? (
+							<motion.div className="grid grid-cols-11 justify-center text-white w-full mx-auto">
+								<div className="col-span-5"></div>
+								<div className={`flex justify-center items-center col-span-1`}>
+									<div
+										className={`border border-[#BBE667] border-dashed ${i == 0 && 'h-1/2 mt-auto'} ${i == roadmap.length - 1 && 'h-1/2 mt-auto'} ${
+											i != roadmap.length - 1 && i != 0 && 'h-full'
+										}`}></div>
+									<CircleIcon sx={{ position: 'absolute' }} htmlColor="#BBE667" />
+								</div>
+								<motion.div
+									variants={fromRight}
+									initial="hidden"
+									whileInView="show"
+									viewport={{
+										once: true,
+										// amount: 1,
+									}}
+									className="glass_card p-5 rounded-lg col-span-5">
+									<Typography variant="h6" color="#BBE667" fontWeight={600}>
+										{r.date}
+									</Typography>
+									<Typography variant="body1">{r.desc}</Typography>
+								</motion.div>
+							</motion.div>
+						) : (
+							<motion.div className="grid grid-cols-11 justify-center text-white w-full mx-auto text-right">
+								<motion.div
+									variants={fromLeft}
+									initial="hidden"
+									whileInView="show"
+									viewport={{
+										once: true,
+										// amount: 1,
+									}}
+									className="glass_card p-5 rounded-lg col-span-5">
+									<Typography variant="h6" color="#BBE667" fontWeight={600}>
+										{r.date}
+									</Typography>
+									<Typography variant="body1">{r.desc}</Typography>
+								</motion.div>
+								<div className="flex justify-center items-center col-span-1">
+									<div
+										className={`border border-[#BBE667] border-dashed ${i == 0 && 'h-1/2 mt-auto'} ${i == roadmap.length - 1 && 'h-1/2 mb-auto'} ${
+											i != roadmap.length - 1 && i != 0 && 'h-full'
+										}`}></div>
+									<CircleIcon sx={{ position: 'absolute' }} htmlColor="#BBE667" />
+								</div>
+								<div className="col-span-5"></div>
+							</motion.div>
+						)}
+					</div>
 				))}
 			</motion.div>
 		</div>

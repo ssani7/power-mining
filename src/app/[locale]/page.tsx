@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import Banner from '@/components/UI/Banner';
 import Services from '@/components/UI/Services';
-import '../styles/embla.css';
+import '@/styles/embla.css';
 import FadeIn from '@/components/motions/FadeIn';
 import elipse from '@/assets/elipse2.png';
 import FadeInScroll from '@/components/motions/FadeInScroll';
@@ -14,7 +14,7 @@ import Animation from '@/components/UI/Animation';
 
 export default function Home() {
 	return (
-		<main>
+		<>
 			<Animation />
 			<div className="galaxybg">
 				<FadeIn>
@@ -45,6 +45,6 @@ export default function Home() {
 
 				<FullCarousel />
 			</div>
-		</main>
+		</>
 	);
 }

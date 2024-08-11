@@ -1,19 +1,21 @@
+'use client';
+
 import { Box, Button, Menu, MenuItem, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 import uk from '@/assets/flags/uk.png';
-import ger from '@/assets/flags/germany.png';
+import sp from '@/assets/flags/spain.png';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { useParams, useRouter } from 'next/navigation';
 
 const languageOptions = [
-	{ name: 'English', value: '', icon: uk },
-	{ name: 'German', value: '', icon: ger },
+	{ name: 'English', value: 'en', icon: uk },
+	{ name: 'Spanish', value: 'es', icon: sp },
 ];
 
 const LanguageSelect = () => {
 	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 	const open = Boolean(anchorEl);
-	const [selectedLanguage, setSelectedLanguage] = React.useState<any>(languageOptions[0]);
 	const handleClick = (event: React.MouseEvent<HTMLElement>) => {
 		setAnchorEl(event.currentTarget);
 	};
@@ -21,8 +23,19 @@ const LanguageSelect = () => {
 		setAnchorEl(null);
 	};
 
+	const router = useRouter();
+
+	const params = useParams<{ locale: string }>();
+
+	const defaultLanguage = languageOptions.find((op) => op.value == params.locale) || languageOptions[0];
+
+	const [selectedLanguage, setSelectedLanguage] = React.useState<any>(defaultLanguage);
+
+	console.log('params', params);
+
 	const handleSelect = (index: number) => {
 		setSelectedLanguage(languageOptions[index]);
+		router.push(`/${languageOptions[index].value}`);
 		handleClose();
 	};
 

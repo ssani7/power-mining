@@ -2,19 +2,23 @@ import { Box, Button, Menu, MenuItem, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { useTranslations } from 'next-intl';
 
 const PERMIT_LINK = 'https://drive.google.com/file/d/1TcnxE6Q3Cr6tBslJBHZ5sCRe6HZoNlKk/view?usp=sharing';
 const WHITE_PAPER_LINK = 'https://drive.google.com/file/d/1DRgsCNoyctj7gXbE7s-iPXPYZrbqJd_Y/view?usp=sharing';
 
-const docOptions = [
-	{ name: 'White Paper', link: WHITE_PAPER_LINK },
-	{ name: 'Business Permit', link: PERMIT_LINK },
-];
-
 const DocsMenu = () => {
 	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 	const open = Boolean(anchorEl);
-	const [selectedLanguage, setSelectedLanguage] = React.useState<any>(docOptions[0]);
+
+	const t = useTranslations('Navbar');
+
+	const docOptions = [
+		{ name: t('White Paper'), link: WHITE_PAPER_LINK },
+		{ name: t('Business Permit'), link: PERMIT_LINK },
+	];
+
+	// const [selectedLanguage, setSelectedLanguage] = React.useState<any>(docOptions[0]);
 	const handleClick = (event: React.MouseEvent<HTMLElement>) => {
 		setAnchorEl(event.currentTarget);
 	};

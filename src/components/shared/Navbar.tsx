@@ -19,13 +19,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import LanguageSelect from './LanguageSelect';
 import DocsMenu from './DocsMenu';
-
-const pages = [
-	{ name: 'About Us', link: '/notfound' },
-	// { name: 'White Paper', link: '/about' },
-	{ name: 'Contact', link: '/notfound' },
-];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+import { useTranslations } from 'next-intl';
 
 function Navbar() {
 	const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -45,6 +39,14 @@ function Navbar() {
 	const handleCloseUserMenu = () => {
 		setAnchorElUser(null);
 	};
+
+	const t = useTranslations('Navbar');
+
+	const pages = [
+		{ name: t('About Us'), link: '#about' },
+		// { name: 'White Paper', link: '/about' },
+		{ name: t('Contact'), link: '#contact' },
+	];
 
 	return (
 		<AppBar position="sticky" sx={{ boxShadow: 'none', background: '#182a08' }}>
@@ -74,10 +76,10 @@ function Navbar() {
 
 						<Box sx={{ marginLeft: '10px', display: { xs: 'none', md: 'flex' }, gap: '10px' }}>
 							<Link href="/notfound">
-								<SecondaryButton>Air Drop</SecondaryButton>
+								<SecondaryButton>{t('Air Drop')}</SecondaryButton>
 							</Link>
 							<Link href="/notfound">
-								<PrimaryButton>Launch App</PrimaryButton>
+								<PrimaryButton>{t('Launch App')}</PrimaryButton>
 							</Link>
 
 							<LanguageSelect />

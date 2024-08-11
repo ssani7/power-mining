@@ -7,6 +7,7 @@ import tg from '@/assets/telegram.png';
 import yt from '@/assets/fb.svg';
 import PrimaryButton from '../shared/PrimaryButton';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 const social = [
 	{ name: 'Twitter', icon: twitter, link: 'https://x.com/Power_Mining01?t=hoAkyG4Is5WsLE-b5Bux7w&s=09' },
@@ -15,8 +16,9 @@ const social = [
 ];
 
 const Footer = () => {
+	const t = useTranslations('Footer');
 	return (
-		<div className="z-20 absolute w-full">
+		<div id="contact" className="z-20 absolute w-full">
 			<div className="bg-[#1C3F00] p-10 flex flex-col gap-5">
 				<div className="flex items-center gap-3 justify-center">
 					<Image src={logo} className="w-20 rounded-sm" alt="" />
@@ -25,24 +27,24 @@ const Footer = () => {
 							Power Mining
 						</Typography>
 						<Typography color="white" variant="h5" fontWeight="700">
-							Token{' '}
+							Coin{' '}
 						</Typography>
 					</div>
 				</div>
 
 				<Typography color="white" variant="body1" textAlign="center">
-					Access our app to get more information on how to invest in PMT, simulate its profitability in different scenarios, and of course, check the active machines in the AMT Project in real time.
+					{t('text')}
 				</Typography>
 
 				<div className="flex justify-center">
 					<Link href="/notfound">
-						<PrimaryButton>Launch App</PrimaryButton>
+						<PrimaryButton>{t('Launch App')}</PrimaryButton>
 					</Link>
 				</div>
 
 				<div className="mt-6">
 					<Typography color="white" variant="body1" textAlign="center">
-						Connect with us{' '}
+						{t('connect')}
 					</Typography>
 
 					<div className="flex items-center justify-center gap-4">

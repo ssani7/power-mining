@@ -6,23 +6,11 @@ import { Typography } from '@mui/material';
 import PrimaryButton from '@/components/shared/PrimaryButton';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 const Banner = () => {
-	const transitionValues = {
-		duration: 0.8,
-		repeat: Infinity,
-		ease: 'easeOut',
-	};
+	const t = useTranslations('HomePage');
 
-	const ballStyle = {
-		display: 'block',
-		width: '5rem',
-		height: '5rem',
-		backgroundColor: 'white',
-		borderRadius: '5rem',
-		marginRight: 'auto',
-		marginLeft: 'auto',
-	};
 	return (
 		<div className="flex flex-col xl:flex-row xl:items-center xl:justify-center gap-10 xl:gap-0 px-6 xl:px-10 pt-6 xl:pt-14 overflow-hidden">
 			<motion.div
@@ -38,11 +26,11 @@ const Banner = () => {
 				viewport={{ once: true }}
 				className="xl:w-1/3 flex flex-col gap-3 text-center">
 				<Typography variant="h2" fontWeight="600">
-					Invest In PMC Mining
+					{t('title')}
 				</Typography>
-				<Typography variant="body2">Poor People Earn With PMC Mining</Typography>
+				<Typography variant="body2">{t('title-desc')}</Typography>
 				<div>
-					<PrimaryButton>Start Mining</PrimaryButton>
+					<PrimaryButton>{t('Buy Now')}</PrimaryButton>
 				</div>
 			</motion.div>
 			<motion.div
