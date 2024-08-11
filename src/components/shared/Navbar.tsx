@@ -75,10 +75,10 @@ function Navbar() {
 						</Box>
 
 						<Box sx={{ marginLeft: '10px', display: { xs: 'none', md: 'flex' }, gap: '10px' }}>
-							<Link href="/notfound">
+							<Link href="/coming">
 								<SecondaryButton>{t('Air Drop')}</SecondaryButton>
 							</Link>
-							<Link href="/notfound">
+							<Link href="/coming">
 								<PrimaryButton>{t('Launch App')}</PrimaryButton>
 							</Link>
 

@@ -33,7 +33,7 @@ const Services = () => {
 				</div>
 			</div>
 			<div className="w-full flex justify-center py-10">
-				<Link href="/notfound">
+				<Link href="/coming">
 					<PrimaryButton>{t('Start Mining')}</PrimaryButton>
 				</Link>
 			</div>

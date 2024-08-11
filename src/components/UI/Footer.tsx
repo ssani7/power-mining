@@ -37,7 +37,7 @@ const Footer = () => {
 				</Typography>
 
 				<div className="flex justify-center">
-					<Link href="/notfound">
+					<Link href="/coming">
 						<PrimaryButton>{t('Launch App')}</PrimaryButton>
 					</Link>
 				</div>
