@@ -12,6 +12,7 @@ import { Typography } from '@mui/material';
 import RoadMap from '@/components/UI/RoadMap';
 import Animation from '@/components/UI/Animation';
 import { unstable_setRequestLocale } from 'next-intl/server';
+import Charts from '@/components/UI/Charts';
 
 export default function Home({ params: { locale } }: Readonly<{ params: { locale: string } }>) {
 	unstable_setRequestLocale(locale);
@@ -36,9 +37,9 @@ export default function Home({ params: { locale } }: Readonly<{ params: { locale
 				</svg>
 			</div> */}
 
-				{/* <Charts /> */}
+				<Charts />
 
-				<div className="py-10 my-20 xl:py-20  custom-scroll">
+				<div id="roadmap" className="py-10 my-20 xl:py-20  custom-scroll">
 					<Typography variant="h5" fontWeight={600} textAlign="center">
 						Roadmap
 					</Typography>

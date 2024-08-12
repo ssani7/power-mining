@@ -11,7 +11,9 @@
 		"Air Drop": "Air Drop",
 		"Launch App": "Launch App",
 		"About Us": "About Us",
-		"Contact": "Contact"
+		"Contact": "Contact",
+		"Roadmap": "Roadmap",
+		"Tokenomics": "Tokenomics"
 	},
 	"Services": {
 		"What is PMC?": "What is PMC?",
@@ -33,10 +35,18 @@
 	},
 	"About": {
 		"About": "About",
-		"desc": "Power Anywhere, With Anybody Power is the first virtual social helping platform for the poor people that supports global users to make friends, live,and entertain without borders. On the basis of LBS (Location Based Services)functionality, the users can find nearby persons or users from anywhere in the world that you are interested in real time and easily start conversations by using the system's automatic language translation.And rich people can help Poor people.",
+		"desc": "Power Anywhere, With Anybody Power is the first virtual social helping platform for the poor people that supports global users to make friends, live,and entertain without borders. On the basis of LBS (Location Based Services)functionality, the users can find nearby persons or users from anywhere in the world that you are interested in real time and easily start conversations by using the system's automatic language translation and rich people can help Poor people.",
 		"PMC Team": "PMC Team",
 		"title-ceo": "CEO & Founder",
 		"ceo name": "Ibn Sayed Sagar"
+	},
+	"token": {
+		"title": "Tokenomics",
+		"desc": "Based on blockchain technology, Power will issue Power (PowerMiningCoin) as a universal point within the platform helping Poor People, and take advantage of DAO (Decentralized Autonomous Organization) to achieve decentralized governance.",
+		"op1": "Mining by user",
+		"op2": "Pre-Sale",
+		"op3": "Liquidity",
+		"op4": "Airdrop"
 	},
 	"Footer": {
 		"text": "Access our app to get more information on how to invest in PMC, simulate its profitability in different scenarios, and of course, check the active machines in the PMC Project in real time.",

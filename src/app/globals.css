@@ -34,7 +34,7 @@ p {
 }
 
 .galaxybg {
-	background-image: url('../../public/green-galaxy2.jpg');
+	background-image: url('../../public/galaxybg.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;

@@ -46,6 +46,9 @@ const Footer = () => {
 					<Typography color="white" variant="body1" textAlign="center">
 						{t('connect')}
 					</Typography>
+					<Typography color="white" variant="body2" textAlign="center">
+						support@powermining.info
+					</Typography>
 
 					<div className="flex items-center justify-center gap-4">
 						{social.map((s, i) => (

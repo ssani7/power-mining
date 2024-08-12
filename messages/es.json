@@ -11,7 +11,9 @@
 		"Air Drop": "Air Drop",
 		"Launch App": "Lanzamiento App",
 		"About Us": "Sobre nosotras",
-		"Contact": "Contacto"
+		"Contact": "Contacto",
+		"Roadmap": "Hoja de ruta",
+		"Tokenomics": "Tokenómica"
 	},
 	"Services": {
 		"What is PMC?": "¿Qué es el PMC?",
@@ -37,6 +39,14 @@
 		"PMC Team": "Equipo PMC",
 		"title-ceo": "CEO & Founder",
 		"ceo name": "Ibn Sayed Sagar"
+	},
+	"token": {
+		"title": "Tokenómica",
+		"desc": "Basado en la tecnología blockchain, Power emitirá Power (PowerMiningCoin) como un punto universal dentro de la plataforma que ayuda a los pobres y aprovechará DAO (Organización Autónoma Descentralizada) para lograr una gobernanza descentralizada.",
+		"op1": "Minería por usuario",
+		"op2": "Preventa",
+		"op3": "Liquidez",
+		"op4": "Entrega por paracaídas"
 	},
 	"Footer": {
 		"text": "Accede a nuestra app para obtener más información sobre cómo invertir en PMC, simular su rentabilidad en diferentes escenarios y por supuesto, consultar en tiempo real las máquinas activas del Proyecto PMC.",

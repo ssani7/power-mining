@@ -43,10 +43,25 @@ function Navbar() {
 	const t = useTranslations('Navbar');
 
 	const pages = [
-		{ name: t('About Us'), link: '#about' },
+		{ name: t('About Us'), link: 'about' },
+		{ name: t('Roadmap'), link: 'roadmap' },
+		{ name: t('Tokenomics'), link: 'token' },
 		// { name: 'White Paper', link: '/about' },
-		{ name: t('Contact'), link: '#contact' },
+		{ name: t('Contact'), link: 'contact' },
 	];
+
+	const handleScrollToElement = (id: string) => {
+		const element = document.getElementById(id);
+		console.log('🚀 ~ handleScrollToElement ~ element:', element);
+
+		if (!element) return;
+
+		window.scrollBy({
+			top: element.getBoundingClientRect().top - 60,
+			left: 0,
+			behavior: 'smooth',
+		});
+	};
 
 	return (
 		<AppBar position="sticky" sx={{ boxShadow: 'none', background: '#182a08' }}>
@@ -69,7 +84,7 @@ function Navbar() {
 							</div>
 							{pages.map((page) => (
 								<Button key={page.link} onClick={handleCloseNavMenu} sx={{ my: 2, color: '#fff', display: 'block', textTransform: 'capitalize' }}>
-									<Link href={page.link}>{page.name}</Link>
+									<div onClick={() => handleScrollToElement(page.link)}>{page.name}</div>
 								</Button>
 							))}
 						</Box>
@@ -107,11 +122,11 @@ function Navbar() {
 									display: { xs: 'block', md: 'none' },
 								}}>
 								{pages.map((page) => (
-									<Link key={page.link} href={page.link}>
+									<div key={page.link} onClick={() => handleScrollToElement(page.link)}>
 										<MenuItem onClick={handleCloseNavMenu}>
 											<Typography textAlign="center">{page.name}</Typography>
 										</MenuItem>
-									</Link>
+									</div>
 								))}
 								<MenuItem>
 									<DocsMenu />
